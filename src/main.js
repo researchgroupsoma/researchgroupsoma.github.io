@@ -1,8 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
+import './plugins/bootstrap-vue'
+import './plugins/vue-scroll-loader'
+import './plugins/vue-clipboard'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import '@babel/polyfill'
+import 'mutationobserver-shim'
 
-Vue.config.productionTip = false
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: h => h(App)
+}).$mount('#app');
