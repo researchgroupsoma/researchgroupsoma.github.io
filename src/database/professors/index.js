@@ -1,13 +1,18 @@
-let API = "/professors"
-import axios from "axios";
+let _professors = ["001_Bruno_Cafeo.json", "002_Awdren_Fontao.json"]
 
-export default {
+export default new class ProfessorDatabase {
+    professors = []
 
-    async getProfessors() {
-        return await axios.get("http://localhost:8080/professors").then(value => value.data)
-    },
+    constructor() {
+        _professors.forEach(professor => this.professors.push(require("./" + professor)))
+    }
+
+    getProfessors() {
+        return this.professors
+    }
 
     getProfessorById(id) {
         return this.professors.find(professor => professor.id == id)
     }
 }
+

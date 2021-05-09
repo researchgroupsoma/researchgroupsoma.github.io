@@ -18,13 +18,9 @@ export default {
     PersonPerfil
   },
 
-  mounted() {
-    this.$http.get("http://localhost:8080/professors/"+this.$route.params.id).then(response => this.professor = response.data)
-  },
-
-  data() {
-    return {
-      professor: {}
+  computed: {
+    professor () {
+      return database.getProfessorById(this.$route.params.id)
     }
   },
 

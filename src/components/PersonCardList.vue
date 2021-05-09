@@ -3,7 +3,7 @@
     <b-row cols="1" cols-sm="2" cols-md="4" cols-lg="6" align-h="center">
       <b-card
           v-bind:title="person.name"
-          v-bind:img-src="person.imageSource"
+          v-bind:img-src="require('../'+person.imageSource)"
           v-bind:img-alt="person.name"
           img-top
           v-for="person in people"
@@ -11,6 +11,7 @@
           v-on:click="$emit('click', person.id)"
           class="m-3"
       >
+        {{person.imageSource}}
       </b-card>
     </b-row>
   </div>

@@ -4,7 +4,7 @@
       <b-col cols="12" md="10">
         <b-container>
           <h1>Software Engineering Research Group</h1>
-          <b-img alt="Group Picture" :src="require('../assets/foto-do-grupo.jpg')" fluid/>
+          <b-img alt="Group Picture" v-bind:src="require('../assets/foto-do-grupo.jpg')" fluid/>
           <h2>Welcome to SERG Website!</h2>
           <p>We are SOAR (SOftware Analytics Research) group at School of Information System, Singapore Management
             University. We primarily work at the intersection of software engineering, cybersecurity and data science,

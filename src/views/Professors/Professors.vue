@@ -19,13 +19,9 @@ export default {
     PersonCardList
   },
 
-  mounted() {
-    database.getProfessors()
-  },
-
-  data() {
-    return {
-      professors: []
+  computed: {
+    professors() {
+      return database.getProfessors()
     }
   },
 

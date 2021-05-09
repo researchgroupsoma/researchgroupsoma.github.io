@@ -2,7 +2,7 @@
   <div id="person-perfil">
     <h3>{{ person.name }}</h3>
     <b-img
-        v-bind:src="person.imageSource"
+        v-bind:src="require('../'+person.imageSource)"
         fluid
         alt=""
         height="200px"
