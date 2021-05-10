@@ -2,7 +2,7 @@
   <div id="research-lines">
     <b-container>
       <h1>Research Lines</h1>
-      <research-lines-group v-bind:researchlines="researchlines"></research-lines-group>
+      <research-lines-group v-bind:researchLines="researchLines"></research-lines-group>
     </b-container>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     ResearchLinesGroup
   },
   computed: {
-    researchlines() {
+    researchLines() {
       return database.getResearchLines()
     }
   }
