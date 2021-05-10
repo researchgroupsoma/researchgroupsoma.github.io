@@ -2,7 +2,6 @@
   <div id="publications">
     <b-container>
       <h1>Publications</h1>
-      <h2>2020</h2>
       <publication-group v-bind:publications="publications"/>
     </b-container>
   </div>

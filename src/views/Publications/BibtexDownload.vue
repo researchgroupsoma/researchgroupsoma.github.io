@@ -16,7 +16,7 @@ export default {
 
   computed: {
     getPublicationById() {
-      return database.getPublicationById(this.$route.params.id).bibtex_non_parsed
+      return database.getPublicationById(this.$route.params.id).bibtex
     }
   },
 }

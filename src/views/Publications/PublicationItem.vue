@@ -74,7 +74,7 @@ export default {
     },
 
     copyBibtex() {
-      this.$clipboard(this.publication.bibtex_non_parsed)
+      this.$clipboard(this.publication.bibtex)
       this.showMessage()
     },
 
