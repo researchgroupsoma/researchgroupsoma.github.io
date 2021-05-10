@@ -3,8 +3,8 @@
   "name": "Gabriel Menezes",
   "imageSource": "assets/students/gabriel-menezes.jpg",
   "titulation": "Graduate",
-  "in_formation_degree": "Master",
-  "institutional_bond": "Student",
+  "inFormationDegree": "Master",
+  "institutionalBond": "Student",
   "interestAreas": [
     "Software Evolution",
     "Mining Software Repositories"

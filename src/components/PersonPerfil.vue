@@ -12,7 +12,7 @@
     <div v-if="person.titulation">
       <h3>Degree</h3>
       <p>{{ person.titulation }}</p>
-      <p v-if="person.in_formation_degree"> {{person.in_formation_degree + ' ' + person.institutional_bond }}</p>
+      <p v-if="person.inFormationDegree"> {{person.inFormationDegree + ' ' + person.institutionalBond }}</p>
     </div>
 
     <div v-if="person.interestAreas">

@@ -13,8 +13,4 @@ export default new class ResearchLinesDatabase {
         return this.lines
     }
 
-    getResearchLinesByIds(ids){
-        return this.lines.filter(line => ids.includes(line.id))
-    }
-
 }

@@ -2,14 +2,14 @@
   <div id="classes">
     <b-container>
       <h1>Classes</h1>
-      <courses-group v-bind:classes="classes"></courses-group>
+      <classes-group v-bind:classes="classes"></classes-group>
     </b-container>
   </div>
 </template>
 
 <script>
 import database from "@/database"
-import ClassesGroup from "@/views/Courses/ClassesGroup";
+import ClassesGroup from "@/views/Classes/ClassesGroup";
 
 export default {
   name: "Classes",

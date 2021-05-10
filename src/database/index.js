@@ -1,8 +1,8 @@
 import professors from "./professors"
 import students from "./students"
 import publications from "./publications"
-import softwares from "@/database/softwares"
-import researchlines from "@/database/reserchlines"
+import softwares from "./softwares"
+import researchlines from "./reserchlines"
 import classes from "./classes"
 import projects from "./projects"
 
