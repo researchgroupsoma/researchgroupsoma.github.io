@@ -6,6 +6,7 @@ import researchlines from "./reserchlines"
 import classes from "./classes"
 import projects from "./projects"
 import news from "./news"
+import vacancies from "./vacancies"
 
 export default {
 
@@ -54,5 +55,9 @@ export default {
 
     getNews() {
         return news.getNews()
+    },
+
+    getVacancies() {
+        return vacancies.getVacancies()
     }
 }
