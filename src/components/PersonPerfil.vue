@@ -12,12 +12,21 @@
     <div v-if="person.titulation">
       <h3>Degree</h3>
       <p>{{ person.titulation }}</p>
-      <p v-if="person.egressed">{{ person.egressed }}</p>
+      <p v-if="person.in_formation_degree"> {{person.in_formation_degree + ' ' + person.institutional_bond }}</p>
+    </div>
+
+    <div v-if="person.interestAreas">
+      <h3>Interest Areas</h3>
+      <b-card-group>
+        <b-card v-for="interestArea in person.interestAreas">{{interestArea}}</b-card>
+      </b-card-group>
     </div>
 
     <div v-if="person.researchLines">
       <h3>Research Lines</h3>
-      <research-lines-group v-bind:researchLines="person.researchLines"></research-lines-group>
+      <b-card-group>
+        <b-card v-for="researchLine in person.researchLines">{{researchLine}}</b-card>
+      </b-card-group>
     </div>
 
     <div v-if="person.description">
@@ -25,46 +34,24 @@
       <p>{{ person.description }}</p>
     </div>
 
-    <div v-if="person.publications">
-      <h3>Publications</h3>
-      <publication-group v-bind:publications="person.publications" v-if="person.publications"/>
-    </div>
-
-    <div v-if="person.students">
-      <h3>Students</h3>
-      <person-card-list v-bind:people="person.students" v-on:click="$emit('click', $event)"/>
-    </div>
-
-    <div v-if="person.courses">
-      <h3>Courses</h3>
-      <classes-group v-bind:courses="person.courses"></classes-group>
-    </div>
-
-    <div v-if="person.projects">
-      <h3>Projects</h3>
-      <projects-group v-bind:projects="person.projects"></projects-group>
+    <div v-if="person.classes">
+      <h3>Classes</h3>
+      <b-card-group>
+        <b-card v-for="classe in person.classes">{{classe}}</b-card>
+      </b-card-group>
     </div>
 
   </div>
 </template>
 
 <script>
-import PublicationGroup from "@/views/Publications/PublicationGroup"
-import PersonCardList from "@/components/PersonCardList"
-import ClassesGroup from "@/views/Courses/CoursesGroup"
-import ProjectsGroup from "@/views/Projects/ProjectsGroup";
-import ResearchLinesGroup from "@/views/ResearchLines/ResearchLinesGroup";
 
 export default {
   //TODO refatorar, colocar cada topico em um Component?
   name: "PersonPerfil",
 
   components: {
-    PersonCardList,
-    PublicationGroup,
-    ClassesGroup,
-    ProjectsGroup,
-    ResearchLinesGroup
+
   },
 
   props: {

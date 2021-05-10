@@ -11,7 +11,6 @@
           v-on:click="$emit('click', person.id)"
           class="m-3"
       >
-        {{person.imageSource}}
       </b-card>
     </b-row>
   </div>

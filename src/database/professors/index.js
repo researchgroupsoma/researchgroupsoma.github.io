@@ -1,4 +1,4 @@
-let _professors = ["001_Bruno_Cafeo.json", "002_Awdren_Fontao.json"]
+let _professors = ["001_Bruno_Cafeo.json"]
 
 export default new class ProfessorDatabase {
     professors = []
