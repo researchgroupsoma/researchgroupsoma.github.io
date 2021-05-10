@@ -5,6 +5,7 @@ import softwares from "./softwares"
 import researchlines from "./reserchlines"
 import classes from "./classes"
 import projects from "./projects"
+import news from "./news"
 
 export default {
 
@@ -49,5 +50,9 @@ export default {
 
     getProjects(){
         return projects.getProjects()
+    },
+
+    getNews() {
+        return news.getNews()
     }
 }
