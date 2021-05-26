@@ -1,0 +1,8 @@
+{
+  "groupName": "Nome do Grupo",
+  "imageSource": "assets/foto-do-grupo.jpg",
+  "welcomeMessage": "Texto de bem-vindo",
+  "missions": ["Missão 1", "Missão 2", "Missão 3"],
+  "researchInterests": ["Interesse 1", "Interesse 2", "Interesse 3"],
+  "organization": "Organização"
+}

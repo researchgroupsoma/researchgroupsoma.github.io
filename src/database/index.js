@@ -7,6 +7,7 @@ import classes from "./classes"
 import projects from "./projects"
 import news from "./news"
 import vacancies from "./vacancies"
+import home from "./home"
 
 export default {
 
@@ -59,5 +60,9 @@ export default {
 
     getVacancies() {
         return vacancies.getVacancies()
+    },
+
+    getHome(){
+        return home.getHome()
     }
 }
