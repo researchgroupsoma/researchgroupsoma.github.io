@@ -34,4 +34,4 @@ jobs:
           git init
           git add -A
           git git -c "user.name=gh-pages" -c "user.email=gh-pages@email.com" commit -m "Deploy"
-          git push -f git@github.com:researchgroupsoma/researchgroupsoma.github.io.git gh-pages
+          git push -f git@github.com:researchgroupsoma/researchgroupsoma.github.io.git master:gh-pages
