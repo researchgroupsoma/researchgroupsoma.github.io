@@ -66,28 +66,28 @@ export default {
           name: "Publications",
           path: "/publications"
         },
-        {
-          name: "Vacancies",
-          path: "/vacancies"
-        },
-        {
-          name: "Research Lines",
-          path: "/research-lines"
-        },
-        {
-          name: "Softwares and Databases",
-          path: "/softwares-and-databases"
-        },
-        {
-          name: "Classes",
-          path: "/classes"
-        },
-        {
-          name: "Projects",
-          path: "/projects"
-        },
+        // {
+        //   name: "Vacancies",
+        //   path: "/vacancies"
+        // },
+        // {
+        //   name: "Research Lines",
+        //   path: "/research-lines"
+        // },
+        // {
+        //   name: "Softwares and Databases",
+        //   path: "/softwares-and-databases"
+        // },
+        // {
+        //   name: "Classes",
+        //   path: "/classes"
+        // },
+        // {
+        //   name: "Projects",
+        //   path: "/projects"
+        // }
       ],
-      brandTitle: "Software Engineering Group"
+      brandTitle: "SOMA Research Group"
     }
   }
 }
