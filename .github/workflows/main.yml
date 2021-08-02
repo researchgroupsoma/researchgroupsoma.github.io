@@ -33,5 +33,5 @@ jobs:
           cd dist
           git init
           git add -A
-          git commit -m "Deploy"
+          git git -c "user.name=gh-pages" -c "user.email=gh-pages@email.com" commit -m "Deploy"
           git push -f git@github.com:researchgroupsoma/researchgroupsoma.github.io.git gh-pages
