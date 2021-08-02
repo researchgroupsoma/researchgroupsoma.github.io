@@ -31,7 +31,6 @@ jobs:
         
       - name: print
         run: |
-          echo ${GITHUB_TOKEN} 
           echo ${GITHUB_REPOSITORY}
           echo ${{ secrets.GITHUB_TOKEN }}
         
