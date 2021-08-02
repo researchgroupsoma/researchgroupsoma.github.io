@@ -20,5 +20,9 @@ export default new class StudentDatabase {
     getStudentById(id) {
         return this.students.find(student => student.id == id)
     }
+
+    getStudentsByProfessorId(professor_id) {
+        return this.students.filter(student => student.professor == professor_id)
+    }
 }
 

@@ -23,7 +23,6 @@
       <p>{{ person.description }}</p>
     </div>
 
-
     <div v-if="person.publications != undefined">
       <h3 v-if="person.publications.length">Publications</h3>
       <publication-group v-bind:publications="person.publications" v-if="person.publications"/>
