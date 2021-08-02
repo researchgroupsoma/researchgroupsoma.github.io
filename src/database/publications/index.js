@@ -20,4 +20,8 @@ export default new class PublicationDatabase {
     getPublicationsByProfessorId(professor_id){
         return this.publications.filter(publication => publication.professors.includes(professor_id))
     }
+
+    getPublicationsByStudentId(student_id){
+        return this.publications.filter(publication => publication.students.includes(student_id))
+    }
 }
