@@ -1,13 +1,5 @@
 <template>
   <div id="nav-bar">
-
-    <!--    <b-navbar sticky fixed="top" v-if="isMediumOrBigger">-->
-    <!--      <b-navbar-brand to="/" class="mr-auto">{{brandTitle}}</b-navbar-brand>-->
-    <!--      <b-navbar-nav>-->
-    <!--        <b-nav-item v-bind:to="route.path" v-for="route in routes">{{ route.name }}</b-nav-item>-->
-    <!--      </b-navbar-nav>-->
-    <!--    </b-navbar>-->
-
     <b-navbar toggleable variant="secondary" class="text-white">
       <b-navbar-brand to="/" class="mr-auto text-white">{{ brandTitle }}</b-navbar-brand>
 
@@ -20,11 +12,19 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item v-bind:to="route.path" v-for="route in routes">
+          <div v-for="route in routes">
+            <b-nav-item-dropdown v-if="route.subroutes">
+              <template v-slot:button-content><span style="color: white">{{ route.name }}</span></template>
+              <b-dropdown-item v-for="subroute in route.subroutes" v-bind:to="subroute.path" >{{subroute.name}}</b-dropdown-item>
+            </b-nav-item-dropdown>
+
+            <b-nav-item v-else v-bind:to="route.path">
             <span style="color: white">
-            {{route.name}}
+            {{ route.name }}
             </span>
-          </b-nav-item>
+            </b-nav-item>
+
+          </div>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -55,12 +55,17 @@ export default {
           path: "/news"
         },
         {
-          name: "Professors",
-          path: "/professors"
-        },
-        {
-          name: "Students",
-          path: "/students"
+          name: "People",
+          subroutes: [
+            {
+              name: "Students",
+              path: "/students"
+            },
+            {
+              name: "Professors",
+              path: "/professors"
+            }
+          ]
         },
         {
           name: "Publications",
