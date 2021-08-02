@@ -1,7 +1,7 @@
 <template>
   <div id="person-perfil">
-    <h3>{{ person.name }}</h3>
     <b-img
+        v-if="person.imageSource"
         v-bind:src="require('../'+person.imageSource)"
         fluid
         alt=""
@@ -9,23 +9,12 @@
         width="200px"
     />
 
-    <div v-if="person.titulation">
-      <h3>Degree</h3>
-      <p>{{ person.titulation }}</p>
-      <p v-if="person.inFormationDegree"> {{person.inFormationDegree + ' ' + person.institutionalBond }}</p>
-    </div>
+    <h3 v-if="person.name">{{ person.name }}</h3>
 
-    <div v-if="person.interestAreas">
-      <h3>Interest Areas</h3>
+    <div v-if="person.interestAreas != undefined">
+      <h3 v-if="person.interestAreas.length">Interest Areas</h3>
       <b-card-group>
-        <b-card v-for="interestArea in person.interestAreas">{{interestArea}}</b-card>
-      </b-card-group>
-    </div>
-
-    <div v-if="person.researchLines">
-      <h3>Research Lines</h3>
-      <b-card-group>
-        <b-card v-for="researchLine in person.researchLines">{{researchLine}}</b-card>
+        <b-card v-for="interestArea in person.interestAreas">{{ interestArea }}</b-card>
       </b-card-group>
     </div>
 
@@ -34,25 +23,54 @@
       <p>{{ person.description }}</p>
     </div>
 
-    <div v-if="person.classes">
-      <h3>Classes</h3>
-      <b-card-group>
-        <b-card v-for="classe in person.classes">{{classe}}</b-card>
-      </b-card-group>
+
+    <div v-if="person.publications != undefined">
+      <h3 v-if="person.publications.length">Publications</h3>
+      <publication-group v-bind:publications="person.publications" v-if="person.publications"/>
+    </div>
+
+    <div v-if="person.students != undefined">
+      <h3 v-if="person.students.length">Students</h3>
+      <person-card-list v-bind:people="person.students" v-on:click="$emit('click', $event)"/>
+    </div>
+
+    <div v-if="person.advisor">
+      <h3>Advisor</h3>
+      <person-card-list v-bind:people="[person.advisor]" v-on:click="goToAdvisorPage($event)"/>
+    </div>
+
+    <div v-if="person.courses != undefined">
+      <h3 v-if="person.courses.length">Courses</h3>
+      <classes-group v-bind:courses="person.courses"></classes-group>
+    </div>
+
+    <div v-if="person.projects != undefined">
+      <h3 v-if="person.projects.length">Projects</h3>
+      <projects-group v-bind:projects="person.projects"></projects-group>
     </div>
 
   </div>
 </template>
 
 <script>
+import PublicationGroup from "@/views/Publications/PublicationGroup"
+import PersonCardList from "@/components/PersonCardList"
+import ClassesGroup from "@/views/Classes/ClassesGroup"
+import ProjectsGroup from "@/views/Projects/ProjectsGroup";
+import ResearchLinesGroup from "@/views/ResearchLines/ResearchLinesGroup";
 
 export default {
   //TODO refatorar, colocar cada topico em um Component?
   name: "PersonPerfil",
 
   components: {
-
+    PersonCardList,
+    PublicationGroup,
+    ClassesGroup,
+    ProjectsGroup,
+    ResearchLinesGroup
   },
+
 
   props: {
     person: Object

@@ -16,4 +16,8 @@ export default new class PublicationDatabase {
     getPublicationById(id){
         return this.publications.find(publication => publication.id == id)
     }
+
+    getPublicationsByProfessorId(professor_id){
+        return this.publications.filter(publication => publication.professors.includes(professor_id))
+    }
 }
