@@ -33,8 +33,7 @@ jobs:
         
       - name: deploy
         run: |
-          cd dist
-          git init
-          git add -A
-          git -c "user.name=gh-pages" -c "user.email=gh-pages@email.com" commit -m "Deploy"
-          git push -f git@github.com:researchgroupsoma/researchgroupsoma.github.io.git master:gh-pages
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
