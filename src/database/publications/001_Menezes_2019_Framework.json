@@ -3,5 +3,7 @@
   "bibtex": "@inproceedings{menezes2019framework,title={Framework Code Samples: How Are They Maintained and Used by Developers?},author={Menezes, Gabriel and Cafeo, Bruno and Hora, Andre},booktitle={2019 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)},pages={1--11},year={2019},organization={IEEE}}",
   "link": "https://ieeexplore.ieee.org/abstract/document/8870139",
   "professors": [1],
-  "students": [1]
+  "students": [1],
+  "officialLink": "https://ieeexplore.ieee.org/abstract/document/8870139",
+  "arxivLink": "https://arxiv.org/pdf/1907.05564"
 }
