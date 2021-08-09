@@ -1,4 +1,4 @@
-let _publications = ["001_Menezes_2019_Framework.json"]
+let _publications = ["001_Menezes_2019_Framework.json", "002_Braga_2020_Quero.json"]
 
 export default new class PublicationDatabase {
     publications = []
