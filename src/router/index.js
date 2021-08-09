@@ -56,11 +56,6 @@ const routes = [
         component: () => import(/* webpackChunkName: "SoftwaresAndDatabases" */ '@/views/Softwares/Softwares.vue')
     },
     {
-        path: '/bibtex-download/:id',
-        name: 'BibtexDownload',
-        component: () => import(/* webpackChunkName: "BibtexDownload" */ '@/views/Publications/BibtexDownload.vue'),
-    },
-    {
         path: '/classes',
         name: 'Classes',
         component: () => import(/* webpackChunkName: "Classes" */ '@/views/Classes/Classes.vue')
