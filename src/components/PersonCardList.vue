@@ -6,6 +6,8 @@
           v-bind:img-src="require('../'+person.imageSource)"
           v-bind:img-alt="person.name"
           img-top
+          img-height="200"
+          img-width="140"
           v-for="person in people"
           v-bind:key="person.id"
           v-on:click="$emit('click', person.id)"

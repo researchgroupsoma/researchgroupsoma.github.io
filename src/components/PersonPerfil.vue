@@ -1,27 +1,34 @@
 <template>
   <div id="person-perfil">
-    <b-img
-        v-if="person.imageSource"
-        v-bind:src="require('../'+person.imageSource)"
-        fluid
-        alt=""
-        height="200px"
-        width="200px"
-    />
+    <h2 class="mb-4">{{ person.name }}</h2>
+    <b-container class="mb-4">
+      <b-row>
+        <b-col>
+          <b-img
+              v-if="person.imageSource"
+              v-bind:src="require('../'+person.imageSource)"
+              fluid
+              alt=""
+              height="200px"
+              width="300px"
+              class="mb-3"
+          />
+          <div v-if="person.interestAreas != undefined">
+<!--            <h3 v-if="person.interestAreas.length">Interest Areas</h3>-->
+            <b-card-group>
+              <b-card v-for="interestArea in person.interestAreas">{{ interestArea }}</b-card>
+            </b-card-group>
+          </div>
+        </b-col>
+        <b-col cols="8">
+          <div v-if="person.description">
+<!--            <h3>Description</h3>-->
+            <p>{{ person.description }}</p>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
 
-    <h3 v-if="person.name">{{ person.name }}</h3>
-
-    <div v-if="person.interestAreas != undefined">
-      <h3 v-if="person.interestAreas.length">Interest Areas</h3>
-      <b-card-group>
-        <b-card v-for="interestArea in person.interestAreas">{{ interestArea }}</b-card>
-      </b-card-group>
-    </div>
-
-    <div v-if="person.description">
-      <h3>Description</h3>
-      <p>{{ person.description }}</p>
-    </div>
 
     <div v-if="person.publications != undefined">
       <h3 v-if="person.publications.length">Publications</h3>
