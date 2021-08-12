@@ -30,12 +30,12 @@
     </b-container>
 
 
-    <div v-if="person.publications != undefined">
+    <div v-if="person.publications != undefined" class="mb-4">
       <h3 v-if="person.publications.length">Publications</h3>
       <publication-group v-bind:publications="person.publications" v-if="person.publications"/>
     </div>
 
-    <div v-if="person.students != undefined">
+    <div v-if="person.students != undefined" class="mb-4">
       <h3 v-if="person.students.length">Students</h3>
       <person-card-list v-bind:people="person.students" v-on:click="$emit('click', $event)"/>
     </div>

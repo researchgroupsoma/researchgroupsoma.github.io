@@ -15,7 +15,8 @@
           <div v-for="route in routes">
             <b-nav-item-dropdown v-if="route.subroutes">
               <template v-slot:button-content><span style="color: white">{{ route.name }}</span></template>
-              <b-dropdown-item v-for="subroute in route.subroutes" v-bind:to="subroute.path" >{{subroute.name}}</b-dropdown-item>
+              <b-dropdown-item v-for="subroute in route.subroutes" v-bind:to="subroute.path">{{ subroute.name }}
+              </b-dropdown-item>
             </b-nav-item-dropdown>
 
             <b-nav-item v-else v-bind:to="route.path">
@@ -51,19 +52,15 @@ export default {
           path: "/"
         },
         {
-          name: "News",
-          path: "/news"
-        },
-        {
           name: "People",
           subroutes: [
             {
-              name: "Students",
-              path: "/students"
-            },
-            {
               name: "Professors",
               path: "/professors"
+            },
+            {
+              name: "Students",
+              path: "/students"
             }
           ]
         },
