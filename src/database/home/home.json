@@ -4,5 +4,6 @@
   "welcomeMessage": "Seja bem-vindo ao website do grupo de pesquisa SOMA. O grupo foi fundado em 2020 pelo professor Bruno Cafeo em pareceria com outros colegas da área de Engenharia de Software da Faculdade de Computação (FACOM) localizada na Universidade Federal de Mato Grosso do Sul (UFMS).",
   "missions": ["Contribuir para o conhecimento em Engenharia de Software", "Fomentar a iteração entre pesquisadores da área de Engeharia de Software", "Despertar interesse de estudantes para a pesquisa em Engenharia de Software"],
   "researchInterests": ["Manutenção de Software", "Mineração de Repositórios", "Autoria de Código", "Variabilidades", "Code Samples"],
-  "organization": "O grupo está organizado da seguinte forma: o professor Bruno Cafeo é o líder e principal responsável pelo grupo, ele define quais serão as atividades promovidas dentro do grupo. Outros professores fazem parte do grupo como o professor André Hora, Awdren Fontão, Bruno Nogueira, Elder Cirilo e Hudson Silva."
+  "organization": "O grupo está organizado da seguinte forma: o professor Bruno Cafeo é o líder e principal responsável pelo grupo, ele define quais serão as atividades promovidas dentro do grupo. Outros professores fazem parte do grupo como o professor André Hora, Awdren Fontão, Bruno Nogueira, Elder Cirilo e Hudson Silva.",
+  "brandTitle": "Grupo de Pesquisa SOMA @ FACOM @ UFMS"
 }

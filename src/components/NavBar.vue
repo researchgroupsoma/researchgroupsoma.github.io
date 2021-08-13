@@ -1,7 +1,15 @@
 <template>
   <div id="nav-bar">
-    <b-navbar toggleable variant="secondary" class="text-white">
-      <b-navbar-brand to="/" class="mr-auto text-white">{{ brandTitle }}</b-navbar-brand>
+
+        <b-navbar sticky fixed="top" v-if="isMediumOrBigger">
+          <b-navbar-brand to="/" class="mr-auto">{{home.brandTitle}}</b-navbar-brand>
+          <b-navbar-nav>
+            <b-nav-item v-bind:to="route.path" v-for="route in routes">{{ route.name }}</b-nav-item>
+          </b-navbar-nav>
+        </b-navbar>
+
+    <b-navbar v-else toggleable variant="secondary" class="text-white">
+      <b-navbar-brand to="/" class="mr-auto text-white">{{ home.brandTitle }}</b-navbar-brand>
 
       <b-navbar-toggle target="navbar-toggle-collapse">
         <template #default="{ expanded }">
@@ -34,6 +42,8 @@
 </template>
 
 <script>
+import database from "@/database"
+
 export default {
   name: "NavBar",
   computed: {
@@ -42,54 +52,36 @@ export default {
     },
     isMediumOrBigger() {
       return this.screenSize >= 768
+    },
+    home() {
+      return database.getHome()
     }
   },
   data() {
     return {
       routes: [
         {
-          name: "Home",
+          name: "Página Principal",
           path: "/"
         },
         {
-          name: "People",
+          name: "Pessoas",
           subroutes: [
             {
-              name: "Professors",
+              name: "Professores",
               path: "/professors"
             },
             {
-              name: "Students",
+              name: "Estudantes",
               path: "/students"
             }
           ]
         },
         {
-          name: "Publications",
+          name: "Publicações",
           path: "/publications"
-        },
-        // {
-        //   name: "Vacancies",
-        //   path: "/vacancies"
-        // },
-        // {
-        //   name: "Research Lines",
-        //   path: "/research-lines"
-        // },
-        // {
-        //   name: "Softwares and Databases",
-        //   path: "/softwares-and-databases"
-        // },
-        // {
-        //   name: "Classes",
-        //   path: "/classes"
-        // },
-        // {
-        //   name: "Projects",
-        //   path: "/projects"
-        // }
+        }
       ],
-      brandTitle: "SOMA Research Group"
     }
   }
 }
