@@ -4,20 +4,16 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "deploy": "gh-pages -d dist"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@orcid/bibtex-parse-js": "0.0.25",
     "bootstrap-vue": "2.21.2",
     "copy-to-clipboard": "^3.3.1",
     "core-js": "^3.6.5",
-    "gh-pages": "^3.2.3",
-    "v-clipboard": "^2.2.3",
     "vue": "^2.6.11",
     "vue-router": "3.5.1",
     "vue-scroll-loader": "^2.2.0",
-    "vue-tweet-embed": "^2.4.0",
     "vuex": "3.6.2"
   },
   "devDependencies": {
