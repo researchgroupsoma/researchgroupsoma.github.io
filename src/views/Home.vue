@@ -13,27 +13,11 @@
           <p>{{home.welcomeMessage}}</p>
 
           <b-container>
-            <b-row>
-              <b-col>
-                <h3>Missões</h3>
-                <b-list-group>
-                  <b-list-group-item v-for="mission in home.missions" v-bind:key="mission">{{mission}}
-                  </b-list-group-item>
-                </b-list-group>
-              </b-col>
-              <b-col>
-                <h3 class="mt-3">Áreas de Interesse</h3>
-                <b-list-group>
-                  <b-list-group-item v-for="interest in home.researchInterests" v-bind:key="interest">{{interest}}</b-list-group-item>
-                </b-list-group>
-              </b-col>
-            </b-row>
-            <b-row>
-              <b-col>
-                <h3 class="mt-3">Organization</h3>
-                <p>{{home.organization}}</p>
-              </b-col>
-            </b-row>
+
+            <missions/>
+            <research-areas/>
+
+            
           </b-container>
         </b-container>
 <!--      </b-col>-->
@@ -47,10 +31,17 @@
 
 <script>
 import database from "@/database"
+import Missions from "@/views/Home/Missions"
+import ResearchAreas from '@/views/Home/ResearchAreas.vue'
 // import { Tweet, Moment, Timeline } from 'vue-tweet-embed'
 
 export default {
+  components: {
+    Missions,
+    ResearchAreas
+  },
   computed: {
+  
     home() {
       return database.getHome()
     }
