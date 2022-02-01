@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <nav-bar class="mb-5"/>
-    <b-container class="mb-5" fluid>
+<!--    <b-container class="mb-5" fluid>-->
       <router-view/>
-    </b-container>
+<!--    </b-container>-->
     <footer-customized/>
   </div>
 </template>

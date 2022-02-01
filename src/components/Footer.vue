@@ -26,39 +26,13 @@
     		</div>
     		<div class="contact_product">
     			<div class="row">
-    				<div class="col-sm-6 col-md-6 col-lg-2">
-    					<div class="footer-logo"><img src="@/assets/footer-logo.png" style="max-width: 100%;"></div>
-    				</div>
-    				<div class="col-sm-6 col-md-6 col-lg-4">
-    					<h1 class="useful_text">USEFUL LINK</h1>
+    					<h1 class="useful_text">Links Úteis</h1>
     				<div class="menu">
     					<ul>
-    						<li><a href="#home"><img src="@/assets/bulit-icon.png" style="padding-right: 10px;">Home</a></li>
-    						<li><a href="#about"><img src="@/assets/bulit-icon.png" style="padding-right: 10px;">About</a></li>
-    						<li><a href="#service"><img src="@/assets/bulit-icon.png" style="padding-right: 10px;">Services</a></li>
-    						<li><a href="#contact"><img src="@/assets/bulit-icon.png" style="padding-right: 10px;">Contact Us</a></li>
+    						<li><a href="https://ufms.br" target="_blank" ><img src="@/assets/bulit-icon.png" style="padding-right: 10px;">UFMS</a></li>
+    						<li><a href="https://www.facom.ufms.br"vtarget="_blank" ><img src="@/assets/bulit-icon.png" style="padding-right: 10px;">FACOM</a></li>
     					</ul>
     				</div>	
-    				</div>
-    				<div class="col-sm-12 col-md-12 col-lg-6">
-    					<h1 class="useful_text">PRODUCT</h1>
-    					<div class="menu multi_column_menu">
-    					   <ul>
-    						  <li class="footer_menu"><a href="#"><img src="@/assets/bulit-icon.png" class="footer_menu">Webhosting</a></li>
-    						  <li class="footer_menu"><a href="#"><img src="@/assets/bulit-icon.png" class="footer_menu">Reseler Hosting</a></li>
-    						  <li class="footer_menu"><a href="#"><img src="@/assets/bulit-icon.png" class="footer_menu">VPS Hosting</a></li>
-    						  <li class="footer_menu"><a href="#"><img src="@/assets/bulit-icon.png" class="footer_menu">Wordpress Hosting</a></li>
-    						  <li class="footer_menu"><a href="#"><img src="@/assets/bulit-icon.png" class="footer_menu">Dedicated hosting</a></li>
-    						  <li class="footer_menu"><a href="#"><img src="@/assets/bulit-icon.png" class="footer_menu">Windows</a></li>
-    					   </ul>
-    				    </div>
-    				    <div class="input-group mb-3 margin-top-30">
-                           <input type="text" class="form-control" placeholder="Enter you email">
-                           <div class="input-group-append">
-                              <button class="subsrcibe_bt" type="Subscribe"><a href="#">SUBSCRIBE</a></button>  
-                           </div>
-                        </div>
-    				</div>
     			</div>
     		</div>
     		<div class="icon_main">
@@ -79,7 +53,7 @@
     </div>
     <div class="copyright_main">
     	<div class="container">
-    		<p class="copy_text">© 2018 All Rights Reserved. <a href="https://html.design">Free Website Templates</a></p>
+    		<p class="copy_text">© 2022 All Rights Reserved. <a href="https://html.design">Free Website Templates</a></p>
     	</div>
     </div>
   </div>
@@ -135,7 +109,6 @@ export default {
 	padding-top: 65px;
 }
 
-.footer-logo{ margin-top: 70px;}
 
 .useful_text{ 
 	width: 100%; 
